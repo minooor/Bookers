@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
   get 'books/new'
   post 'books' => 'books#create'
-  get 'books/show'
+  get 'books/:id' => 'books#show',as:'book'
   get 'books/edit'
   root to: "homes#top"
   get 'books' => 'books#index'
